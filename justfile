@@ -25,8 +25,34 @@ setup:
         cargo install --locked cargo-tarpaulin
     fi
 
+    if ! command -v cargo-tauri &> /dev/null; then
+        echo "tauri not found, installing..."
+        cargo install --version "^2.0.0" --locked tauri-cli
+    fi
+
+    if ! command -v trunk &> /dev/null; then
+        echo "trunk not found, installing..."
+        cargo install --locked trunk
+    fi
+
+
+build-web:
+    trunk build --config ./web/Trunk.toml --release
+
+build-gui:
+    cargo tauri build --config ./gui/tauri.conf.json
+
 build *ARGS:
     cargo build {{ ARGS }}
+
+run-tui:
+    cargo run --bin charlene-tui
+
+run-web:
+    trunk serve --config ./web/Trunk.toml
+
+run-gui:
+    cargo tauri dev --config ./gui/tauri.conf.json
 
 run *ARGS:
     cargo run {{ ARGS }}
