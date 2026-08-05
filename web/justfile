@@ -1,0 +1,19 @@
+set quiet
+
+setup:
+    npm install
+
+build: setup
+    npm run build
+
+run: setup
+    npm run dev
+
+format:
+    npm run format
+
+lint:
+    npm run lint
+
+clean:
+    rm -rf node_modules dist
