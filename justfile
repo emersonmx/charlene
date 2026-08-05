@@ -47,9 +47,6 @@ build *ARGS:
 run-tui:
     cargo run --bin charlene-tui
 
-run-web:
-    trunk serve --config ./web/Trunk.toml
-
 run-gui:
     cargo tauri dev --config ./gui/tauri.conf.json
 
