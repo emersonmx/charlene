@@ -30,15 +30,11 @@ setup:
         cargo install --version "^2.0.0" --locked tauri-cli
     fi
 
-    if ! command -v trunk &> /dev/null; then
-        echo "trunk not found, installing..."
-        cargo install --locked trunk
-    fi
+[private]
+setup-web:
+    cd web && npm install
 
-build-web:
-    trunk build --config ./web/Trunk.toml --release
-
-build-gui:
+build-gui: setup-web
     cargo tauri build --config ./gui/tauri.conf.json
 
 build *ARGS:
@@ -47,7 +43,7 @@ build *ARGS:
 run-tui:
     cargo run --bin charlene-tui
 
-run-gui:
+run-gui: setup-web
     cargo tauri dev --config ./gui/tauri.conf.json
 
 run *ARGS:
@@ -57,20 +53,18 @@ watch *ARGS:
     bacon {{ ARGS }}
 
 format:
+    cargo clippy --fix --allow-dirty --locked --workspace --all-targets --all-features
     cargo fmt
     cd web && npm run format
 
 lint:
     cargo clippy --locked --workspace --all-targets --all-features
+    cargo fmt --check --verbose
     cd web && npm run lint
 
-lint-fix:
-    cargo clippy --fix --allow-dirty --locked --workspace --all-targets --all-features
-    cd web && npm run lint-fix
-
 ci:
-    cargo fmt --check
     cargo clippy --locked --workspace --all-targets --profile ci --all-features
+    cargo fmt --check
     cd web && npm run lint
 
 test *ARGS:
