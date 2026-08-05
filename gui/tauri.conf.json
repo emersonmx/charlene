@@ -4,9 +4,9 @@
     "version": "0.1.0",
     "identifier": "com.emersonmx.charlene",
     "build": {
-        "beforeDevCommand": "just run-web",
-        "devUrl": "http://localhost:1420",
-        "beforeBuildCommand": "just build-web",
+        "beforeDevCommand": "npm run dev",
+        "beforeBuildCommand": "npm run build",
+        "devUrl": "http://localhost:5173",
         "frontendDist": "../web/dist"
     },
     "app": {

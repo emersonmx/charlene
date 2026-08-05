@@ -1,6 +1,6 @@
 [workspace]
 resolver = "3"
-members = ["formatter", "gui", "proxy", "tui", "web"]
+members = ["formatter", "gui", "proxy", "tui"]
 
 [workspace.dependencies]
 anyhow = "1"
