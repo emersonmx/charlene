@@ -35,7 +35,6 @@ setup:
         cargo install --locked trunk
     fi
 
-
 build-web:
     trunk build --config ./web/Trunk.toml --release
 
@@ -60,18 +59,18 @@ run *ARGS:
 watch *ARGS:
     bacon {{ ARGS }}
 
-format *ARGS:
-    cargo fmt {{ ARGS }}
+format:
+    cargo fmt
 
-lint *ARGS:
-    cargo clippy {{ ARGS }}
+lint:
+    cargo clippy --locked --workspace --all-targets --all-features
 
-lint-fix *ARGS:
-    cargo clippy --fix --allow-dirty {{ ARGS }}
+lint-fix:
+    cargo clippy --fix --allow-dirty --locked --workspace --all-targets --all-features
 
 ci:
-    just format --check
-    just lint
+    cargo fmt --check
+    cargo clippy --locked --workspace --all-targets --profile ci --all-features
 
 test *ARGS:
     cargo nextest {{ ARGS }}
