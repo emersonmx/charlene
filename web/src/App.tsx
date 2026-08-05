@@ -8,7 +8,9 @@ function App() {
             <button
                 type="button"
                 className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
-                onClick={() => setCount((count) => count + 1)}
+                onClick={() => {
+                    setCount((count) => count + 1);
+                }}
             >
                 Count is {count}
             </button>
