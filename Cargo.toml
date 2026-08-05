@@ -4,12 +4,12 @@ members = ["formatter", "gui", "proxy", "tui", "web"]
 
 [workspace.dependencies]
 anyhow = "1"
-insta = { version = "1.47", features = ["yaml"] }
+insta = { version = "1", features = ["yaml"] }
 rstest = "0.26"
 serde = "1"
 serde_json = "1"
 thiserror = "2"
-tokio = { version = "1.48", features = ["full"] }
+tokio = { version = "1", features = ["full"] }
 tokio-stream = "0.1"
 tracing = "0.1"
 tracing-appender = "0.2"
