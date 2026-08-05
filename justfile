@@ -58,16 +58,20 @@ watch *ARGS:
 
 format:
     cargo fmt
+    cd web && npm run format
 
 lint:
     cargo clippy --locked --workspace --all-targets --all-features
+    cd web && npm run lint
 
 lint-fix:
     cargo clippy --fix --allow-dirty --locked --workspace --all-targets --all-features
+    cd web && npm run lint-fix
 
 ci:
     cargo fmt --check
     cargo clippy --locked --workspace --all-targets --profile ci --all-features
+    cd web && npm run lint
 
 test *ARGS:
     cargo nextest {{ ARGS }}
@@ -80,3 +84,4 @@ review-snap *ARGS:
 
 clean *ARGS:
     cargo clean {{ ARGS }}
+    cd web && rm -rf node_modules dist
