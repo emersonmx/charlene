@@ -1,22 +1,15 @@
-import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router";
+import ListRequests from "./pages/ListRequests";
+import ShowRequest from "./pages/ShowRequest";
 
 function App() {
-    const [count, setCount] = useState(0);
-
     return (
-        <>
-            <section className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
-                <button
-                    type="button"
-                    className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
-                    onClick={() => {
-                        setCount((count) => count + 1);
-                    }}
-                >
-                    Count is {count}
-                </button>
-            </section>
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route index element={<ListRequests />} />
+                <Route path="requests/:reqId" element={<ShowRequest />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 
