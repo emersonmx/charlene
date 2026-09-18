@@ -5,11 +5,12 @@
     "main": "index.js",
     "scripts": {
         "test": "jest",
-        "build": "tsc --build && vite build",
+        "test:watch": "jest --watch",
+        "build": "tsc && vite build",
         "dev": "vite",
         "preview": "vite preview",
         "format": "eslint --fix . && prettier --write .",
-        "lint": "tsc --noEmit && eslint . && prettier --check ."
+        "lint": "tsc && eslint . && prettier --check ."
     },
     "keywords": [],
     "author": "",
