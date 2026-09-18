@@ -9,6 +9,12 @@ build: setup
 run: setup
     pnpm dev
 
+test:
+    pnpm test
+
+test-watch:
+    pnpm test:watch
+
 format:
     pnpm format
 
