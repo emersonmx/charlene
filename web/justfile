@@ -1,19 +1,19 @@
 set quiet
 
 setup:
-    npm install
+    pnpm install
 
 build: setup
-    npm run build
+    pnpm build
 
 run: setup
-    npm run dev
+    pnpm dev
 
 format:
-    npm run format
+    pnpm format
 
 lint:
-    npm run lint
+    pnpm lint
 
 clean:
     rm -rf node_modules dist
