@@ -11,13 +11,13 @@ importers:
         specifier: ^2.11.1
         version: 2.11.1
       react:
-        specifier: ^19.2.8
+        specifier: ^19.3.0
         version: 19.3.0
       react-dom:
-        specifier: ^19.2.8
+        specifier: ^19.3.0
         version: 19.3.0(react@19.3.0)
       react-router:
-        specifier: ^8.3.0
+        specifier: ^8.4.0
         version: 8.4.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
     devDependencies:
       "@eslint/js":
@@ -27,53 +27,53 @@ importers:
         specifier: ^4.3.3
         version: 4.3.3(vite@8.3.0(@types/node@26.6.1)(esbuild@0.28.2)(jiti@2.7.0))
       "@testing-library/dom":
-        specifier: ^10.4.1
+        specifier: ^10.4.2
         version: 10.4.2
       "@testing-library/react":
-        specifier: ^16.3.2
+        specifier: ^16.3.3
         version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       "@types/jest":
         specifier: ^30.0.0
         version: 30.0.0
       "@types/node":
-        specifier: ^26.2.0
+        specifier: ^26.6.1
         version: 26.6.1
       "@types/react":
-        specifier: ^19.2.18
+        specifier: ^19.3.0
         version: 19.3.0
       "@types/react-dom":
-        specifier: ^19.2.4
+        specifier: ^19.3.0
         version: 19.3.0(@types/react@19.3.0)
       "@vitejs/plugin-react":
-        specifier: ^6.0.5
+        specifier: ^6.1.1
         version: 6.1.1(vite@8.3.0(@types/node@26.6.1)(esbuild@0.28.2)(jiti@2.7.0))
       esbuild:
         specifier: ^0.28.2
         version: 0.28.2
       eslint:
-        specifier: ^10.8.1
+        specifier: ^10.10.0
         version: 10.10.0(jiti@2.7.0)(supports-color@8.1.1)
       eslint-plugin-react-hooks:
         specifier: ^7.1.1
         version: 7.1.1(eslint@10.10.0(jiti@2.7.0)(supports-color@8.1.1))(supports-color@8.1.1)
       eslint-plugin-react-refresh:
-        specifier: ^0.5.4
+        specifier: ^0.5.7
         version: 0.5.7(eslint@10.10.0(jiti@2.7.0)(supports-color@8.1.1))
       globals:
-        specifier: ^17.11.0
+        specifier: ^17.12.0
         version: 17.12.0
       jest:
-        specifier: ^30.4.2
+        specifier: ^30.5.1
         version: 30.5.1(@types/node@26.6.1)(supports-color@8.1.1)(ts-node@10.9.2(@types/node@26.6.1)(typescript@6.0.3))
       jest-environment-jsdom:
-        specifier: ^30.4.1
+        specifier: ^30.5.1
         version: 30.5.1(supports-color@8.1.1)
       prettier:
-        specifier: ^3.9.6
-        version: 3.9.7
+        specifier: ^3.9.8
+        version: 3.9.8
       prettier-plugin-tailwindcss:
         specifier: ^0.8.1
-        version: 0.8.1(prettier@3.9.7)
+        version: 0.8.1(prettier@3.9.8)
       tailwindcss:
         specifier: ^4.3.3
         version: 4.3.3
@@ -84,10 +84,10 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
       typescript-eslint:
-        specifier: ^8.67.0
+        specifier: ^8.70.0
         version: 8.70.0(eslint@10.10.0(jiti@2.7.0)(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
       vite:
-        specifier: ^8.2.1
+        specifier: ^8.3.0
         version: 8.3.0(@types/node@26.6.1)(esbuild@0.28.2)(jiti@2.7.0)
 
 packages:
@@ -3784,10 +3784,10 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.9.7:
+  prettier@3.9.8:
     resolution:
       {
-        integrity: sha512-T3mF5P7HFzZVLDQuCUNtJj6WK1pcpLMweMNUVwGb01bLNkH9AkKxtZvmInw8K6bnn2O3d6/5RHl6zSHiBAD0Og==,
+        integrity: sha512-WRFq3Wn3WId7LLROfMLdH7xaFr2jR62wU8nLO6rQUOLOxNZUviyJQs1M0iIhLexSFy+L+w0ch66wtoO2jRjG0A==,
       }
     engines: { node: ">=14" }
     hasBin: true
@@ -6723,11 +6723,11 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-tailwindcss@0.8.1(prettier@3.9.7):
+  prettier-plugin-tailwindcss@0.8.1(prettier@3.9.8):
     dependencies:
-      prettier: 3.9.7
+      prettier: 3.9.8
 
-  prettier@3.9.7: {}
+  prettier@3.9.8: {}
 
   pretty-format@27.5.1:
     dependencies:
